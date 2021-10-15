@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kiril&#39;s Security Blog</title>
+    <link>https://www.offsec.dev/tags/</link>
+    <description>Recent content in Tags on Kiril&#39;s Security Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2008 - 2020, Kiril Stefanov; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 19 Jul 2019 22:50:31 +0202</lastBuildDate>
+    
+	<atom:link href="https://www.offsec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cve</title>
+      <link>https://www.offsec.dev/tags/cve/</link>
+      <pubDate>Fri, 19 Jul 2019 22:50:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>htb</title>
+      <link>https://www.offsec.dev/tags/htb/</link>
+      <pubDate>Fri, 19 Jul 2019 22:50:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/htb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lfi</title>
+      <link>https://www.offsec.dev/tags/lfi/</link>
+      <pubDate>Fri, 19 Jul 2019 22:50:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/lfi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://www.offsec.dev/tags/linux/</link>
+      <pubDate>Fri, 19 Jul 2019 22:50:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shellshock</title>
+      <link>https://www.offsec.dev/tags/shellshock/</link>
+      <pubDate>Fri, 19 Jul 2019 22:50:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/shellshock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sudo</title>
+      <link>https://www.offsec.dev/tags/sudo/</link>
+      <pubDate>Fri, 19 Jul 2019 22:50:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/sudo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writeup</title>
+      <link>https://www.offsec.dev/tags/writeup/</link>
+      <pubDate>Fri, 19 Jul 2019 22:50:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/writeup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ftp</title>
+      <link>https://www.offsec.dev/tags/ftp/</link>
+      <pubDate>Sat, 13 Jul 2019 10:30:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/ftp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metasploit</title>
+      <link>https://www.offsec.dev/tags/metasploit/</link>
+      <pubDate>Sat, 13 Jul 2019 10:30:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/metasploit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://www.offsec.dev/tags/windows/</link>
+      <pubDate>Sat, 13 Jul 2019 10:30:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>smb</title>
+      <link>https://www.offsec.dev/tags/smb/</link>
+      <pubDate>Wed, 10 Jul 2019 17:23:31 +0200</pubDate>
+      
+      <guid>https://www.offsec.dev/tags/smb/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

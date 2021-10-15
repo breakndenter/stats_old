@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>htb on Kiril&#39;s Security Blog</title>
+    <link>https://www.offsec.dev/categories/htb/</link>
+    <description>Recent content in htb on Kiril&#39;s Security Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2008 - 2020, Kiril Stefanov; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 02 Mar 2019 17:23:31 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.offsec.dev/categories/htb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HackTheBox - Access Walkthrough</title>
+      <link>https://www.offsec.dev/posts/access/</link>
+      <pubDate>Sat, 02 Mar 2019 17:23:31 +0200</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/access/</guid>
+      <description>1. Recon and Information gathering Nmap ╭─root@warmachine ~/hackthebox/access ╰─# cat base_tcp.nmap # Nmap 7.70 scan initiated Sun Feb 24 22:40:43 2019 as: nmap -sV -sC -oN base_tcp.nmap 10.10.10.98 Nmap scan report for 10.10.10.98 Host is up (0.037s latency). Not shown: 997 filtered ports PORT STATE SERVICE VERSION 21/tcp open ftp Microsoft ftpd | ftp-anon: Anonymous FTP login allowed (FTP code 230) |_Can&amp;#39;t get directory listing: PASV failed: 425 Cannot open data connection.</description>
+    </item>
+    
+  </channel>
+</rss>

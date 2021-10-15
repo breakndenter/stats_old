@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/ansi_art/</loc>
+    <lastmod>2020-05-18T13:00:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/</loc>
+    <lastmod>2020-05-18T13:00:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/</loc>
+    <lastmod>2020-05-18T13:00:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/ctf_post/</loc>
+    <lastmod>2020-05-18T12:59:46+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/blog/</loc>
+    <lastmod>2020-05-18T12:57:35+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/about/</loc>
+    <lastmod>2020-05-18T12:51:53+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/enum/</loc>
+    <lastmod>2020-05-15T20:15:58+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/shells/</loc>
+    <lastmod>2020-05-15T20:15:41+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/writeups/</loc>
+    <lastmod>2020-05-15T17:29:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/resources/</loc>
+    <lastmod>2020-05-15T17:29:15+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/cve/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/beep/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/htb/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/lfi/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/linux/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/shellshock/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/sudo/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/writeup/</loc>
+    <lastmod>2019-07-19T22:50:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/ftp/</loc>
+    <lastmod>2019-07-13T10:30:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/devel/</loc>
+    <lastmod>2019-07-13T10:30:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/metasploit/</loc>
+    <lastmod>2019-07-13T10:30:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/windows/</loc>
+    <lastmod>2019-07-13T10:30:31+02:02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/lame/</loc>
+    <lastmod>2019-07-10T17:23:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/tags/smb/</loc>
+    <lastmod>2019-07-10T17:23:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/cache/</loc>
+    <lastmod>2019-03-02T17:23:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/posts/aragog/</loc>
+    <lastmod>2018-07-26T23:39:09+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.offsec.dev/categories/</loc>
+  </url>
+  
+</urlset>

